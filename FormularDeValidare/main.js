@@ -1,8 +1,8 @@
 const form = document.getElementById('form');
-const username = document.getElementById('username');
+const username = document.getElementById('Nume-Utilizator');
 const email = document.getElementById('email');
-const password = document.getElementById('password');
-const confirm_password = document.getElementById('confirm-password');
+const password = document.getElementById('parola');
+const confirm_password = document.getElementById('confirmare-Parola');
 
 function showError(input, message) {
   const form_control = input.parentElement;
@@ -21,12 +21,12 @@ function checkEmail(input) {
   if (re.test(input.value.trim())) {
     showSuccess(input);
   } else {
-    showError(input, 'Email is not valid');
+    showError(input, 'Adresa de email nu este validă');
   }
 }
 function checkPasswordMatch(password, confirm_password) {
   if (password.value !== confirm_password.value) {
-    showError(confirm_password, ' Passwords do not match');
+    showError(confirm_password, 'Parolele nu se potrivesc');
   }
 }
 
@@ -37,7 +37,7 @@ function getFieldName(fieldName) {
 function checkRequiredFields(inputArr) {
   inputArr.forEach(function (input) {
     if (input.value.trim() === '') {
-      showError(input, ` ${getFieldName(input).replace('-', ' ')} is required`);
+      showError(input, ` ${getFieldName(input).replace('-', ' ')} este necesară`);
     }
     else {
       showSuccess(input);
@@ -47,9 +47,9 @@ function checkRequiredFields(inputArr) {
 
 function checkLength(input, min, max) {
   if (input.value.length < min) {
-    showError(input, `${getFieldName(input)} must be at least ${min} characters`);
+    showError(input, `Trebuie sa fie de cel puțin ${min} caractere`);
   } else if (input.value.length > max) {
-    showError(input, `${getFieldName(input)} must be less than ${max} characters`);
+    showError(input, `Trebuie să conțină mai puțin de ${max} caractere`);
   } else {
     showSuccess(input);
   }
