@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Formular de validare</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="form" class="form">
+        <h2>Înregistreazăte la noi</h2>
+        <div class="form-control">
+          <label for="username">Nume utilizator</label>
+          <input
+            id="username"
+            type="text"
+            placeholder="Introduce-ți numele de utilizator"
+          />
+          <small>Mesaj de eroare</small>
+        </div>
+        <div class="form-control">
+          <label for="email">Email</label>
+          <input
+            id="email"
+            type="text"
+            placeholder="Introduce-ți adresa de email"
+          />
+          <small>Mesaj de eroare</small>
+        </div>
+        <div class="form-control">
+          <label for="password">Parolă</label>
+          <input
+            id="password"
+            type="password"
+            placeholder="Introduce-ți parola"
+          />
+          <small>Mesaj de eroare</small>
+        </div>
+        <div class="form-control">
+          <label for="confirm-password">Confirmare Parolă</label>
+          <input
+            id="confirm-password"
+            type="password"
+            placeholder="Introduce-ți din nou parola"
+          />
+          <small>Mesaj de eroare</small>
+        </div>
+        <button>Trimite</button>
+      </form>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
